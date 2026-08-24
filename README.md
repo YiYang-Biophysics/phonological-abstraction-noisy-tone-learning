@@ -11,6 +11,7 @@ The repository is designed as a research artifact, not a general-purpose softwar
 - A dependency-free static dashboard in `dashboard/`.
 - Release hygiene and validation scripts in `scripts/`.
 - Checkpoint manifests and audit summaries in `metadata/`.
+- Representative checkpoint-release labels and manifests for three phase examples.
 - Documentation for data policy, experiment mapping, checkpoint handling, and reproducibility scope in `docs/`.
 
 ## Repository Structure
@@ -22,7 +23,8 @@ The repository is designed as a research artifact, not a general-purpose softwar
 │   ├── scale_noise_performance_landscape/
 │   ├── epoch_wise_learning_trajectories/
 │   ├── acoustic_perturbation_probe/
-│   └── appendix_results/
+│   ├── appendix_results/
+│   └── representative_checkpoint_release/
 ├── code/                  # public code organization and cleaned-entry templates
 ├── configs/               # path/config templates
 ├── docs/                  # paper-result map and release documentation
@@ -63,6 +65,7 @@ The dashboard has no Node.js or build dependency. It can read CSVs from `data/` 
 | Capacity controls | `data/appendix_results/capacity/` | CSV only |
 | HuBERT controls | `data/appendix_results/hubert/` | CSV only |
 | Perturbation noise-family ablation | `data/appendix_results/perturbation_ablation/` | CSV only |
+| Representative checkpoint release | `data/representative_checkpoint_release/`, `metadata/representative_checkpoint_release_manifest.csv` | CSV/manifest only |
 
 For the full mapping, see `docs/PAPER_RESULTS_MAP.md`.
 
@@ -98,10 +101,12 @@ Current checkpoint documentation:
 
 - `docs/CHECKPOINTS.md`
 - `docs/CHECKPOINT_COMPRESSION_PLAN.md`
+- `docs/REPRESENTATIVE_CHECKPOINT_RELEASE.md`
 - `metadata/checkpoint_manifest.csv`
+- `metadata/representative_checkpoint_release_manifest.csv`
 - `metadata/checkpoint_inventory_summary.md`
 
-External checkpoint hosting should be decided after the code and dashboard are finalized.
+The first planned checkpoint artifact contains epoch-wise checkpoints for three representative phase examples: `5%` scale with `10%`, `70%`, and `90%` label noise. The matching sanitized label manifests are included in Git; checkpoint binaries remain external.
 
 ## Validation
 

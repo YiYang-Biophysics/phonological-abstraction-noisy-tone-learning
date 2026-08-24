@@ -17,6 +17,13 @@ This directory contains release-safe CSV files for the EMNLP 2026 Findings artif
 - `appendix_results/hubert/hubert_scale10_memorization_trajectory_all.csv`
 - `appendix_results/perturbation_ablation/noise_ablation_scale100_ratio10_70_summary.csv`
 
+## Representative Checkpoint Release Manifests
+
+- `representative_checkpoint_release/manifest_index.csv`: selected `5%` scale settings for the three representative regimes.
+- `representative_checkpoint_release/manifest_labels/`: sanitized AISHELL manifest/label files for `10%`, `70%`, and `90%` label noise.
+
+Checkpoint binaries are not stored in `data/`. See `docs/REPRESENTATIVE_CHECKPOINT_RELEASE.md`.
+
 ## NA Rules
 
 - For `0%` label noise, exception memorization and self-correction metrics may be blank because there are no corrupted-label positions.
@@ -25,5 +32,4 @@ This directory contains release-safe CSV files for the EMNLP 2026 Findings artif
 
 ## No Raw Audio
 
-This directory contains aggregate CSV data only. It does not contain AISHELL-1 audio, derived perturbation audio, or model checkpoint binaries.
-
+This directory contains result CSVs and text manifest/label files only. It does not contain AISHELL-1 audio, derived perturbation audio, or model checkpoint binaries.
