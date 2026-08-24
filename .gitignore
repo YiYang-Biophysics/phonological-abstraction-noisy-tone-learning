@@ -1,0 +1,42 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environments and editor state
+.env
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+
+# Logs and experiment trackers
+logs/
+swanlab/
+swanlog/
+swanlab_*cache*/
+wandb/
+*.log
+
+# Large model artifacts are documented in metadata/checkpoint_manifest.csv.
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# Raw or derived speech audio must not be committed.
+*.wav
+*.flac
+*.mp3
+*.m4a
+
+# Generated local archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Local-only audit outputs with private machine paths.
+local_private/

@@ -1,0 +1,12 @@
+experiment_id,paper_component,release_status,staged_result_path,implementation_reference,notes
+scale_noise_landscape,Scale-noise performance landscape,staged,data/scale_noise_performance_landscape/full_test_accuracy_checkpoint_best_matrix.csv,docs/ORIGINAL_CODE_INDEX.md#main-scale-noise-training,Dashboard-ready result table
+epoch_trajectories,Epoch-wise learning trajectories,staged,data/epoch_wise_learning_trajectories/*.csv,docs/ORIGINAL_CODE_INDEX.md#epoch-wise-trajectories,70 dashboard trajectory CSVs
+acoustic_perturbation,Acoustic perturbation probe,staged,data/acoustic_perturbation_probe/all_settings_summary.csv,docs/ORIGINAL_CODE_INDEX.md#acoustic-perturbation-probe,63 nonzero-noise settings
+capacity_depth,Transformer depth intervention,staged,data/appendix_results/capacity/depth_truncation_full_test_accuracy.csv,docs/ORIGINAL_CODE_INDEX.md#capacity-interventions,Appendix result CSV
+bottleneck_rank,Bottleneck rank intervention,staged,data/appendix_results/capacity/bottleneck_full_test_checkpoint_best_long.csv,docs/ORIGINAL_CODE_INDEX.md#capacity-interventions,Appendix result CSV plus matrix version
+hubert_scale10,HuBERT scale-10 trajectories,staged,data/appendix_results/hubert/hubert_scale10_memorization_trajectory_all.csv,docs/ORIGINAL_CODE_INDEX.md#hubert-control,Appendix HuBERT trajectory and best-validation CSVs
+perturbation_ablation,Noise distribution perturbation ablation,staged,data/appendix_results/perturbation_ablation/noise_ablation_scale100_ratio10_70_summary.csv,docs/ORIGINAL_CODE_INDEX.md#perturbation-noise-ablation,Private path columns removed from public CSV
+review_dashboard,Static data browser,staged,dashboard/index.html,dashboard/,Static HTML/CSS/JS dashboard
+random_init_grid,Random initialization control,manifest_only,metadata/checkpoint_manifest.csv,docs/ORIGINAL_CODE_INDEX.md#random-initialization-and-frozen-feature-controls,Result CSV not yet staged
+frozen_features,Frozen pretrained features,manifest_only,metadata/checkpoint_manifest.csv,docs/ORIGINAL_CODE_INDEX.md#random-initialization-and-frozen-feature-controls,Result CSV not yet staged
+

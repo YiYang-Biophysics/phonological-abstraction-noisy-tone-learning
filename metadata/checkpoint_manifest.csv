@@ -1,0 +1,9 @@
+collection_id,paper_experiment,backbone,training_scale,noise_ratio,checkpoint_granularity,release_status,planned_release_url,sha256_status,notes
+wav2vec_large_scale_noise_main,Scale-noise grid,wav2vec2.0,1/2/3/5/10/50/100,0-90,epoch/best/last,external_not_uploaded,TBD,not_computed,Primary wav2vec2.0 scale-noise checkpoint collection
+wav2vec_large_scale_noise_tune,Scale-noise tuned/continuation runs,wav2vec2.0,mixed,mixed,epoch/best/last,external_not_uploaded,TBD,not_computed,Continuation/tuning runs used for final cells
+wav2vec_large_trajectory,Learning trajectories,wav2vec2.0,1/2/3/5/10/50/100,0-90,epoch,external_not_uploaded,TBD,not_computed,Full epoch-wise checkpoint source for trajectory CSVs
+hubert_scale10,HuBERT control,HuBERT,10,0-90,epoch/best/last,external_not_uploaded,TBD,not_computed,HuBERT scale-10 controls
+random_init_grid,Random initialization control,wav2vec2.0 random init,mixed,mixed,epoch/best/last,external_not_uploaded,TBD,not_computed,Camera-ready random initialization baseline
+framece_capacity,T3 sandhi capacity intervention,wav2vec2.0,mixed,mixed,epoch/best/last,external_not_uploaded,TBD,not_computed,Capacity and bottleneck run families
+pretrained_source_models,Pretrained source models,wav2vec2.0/HuBERT,NA,NA,pretrained,external_not_uploaded,TBD,not_computed,Pretrained sources are not committed to Git
+

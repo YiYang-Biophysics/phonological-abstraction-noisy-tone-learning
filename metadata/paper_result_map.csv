@@ -1,0 +1,13 @@
+paper_location,result_name,data_path,row_filter,metric_columns,staged_status,notes
+Figure 1,Scale-noise performance landscape,data/scale_noise_performance_landscape/full_test_accuracy_checkpoint_best_matrix.csv,all rows,scale_1pct|scale_2pct|scale_3pct|scale_5pct|scale_10pct|scale_50pct|scale_100pct,staged,Best-validation checkpoint clean test accuracy
+Figure 2,Epoch-wise learning trajectories,data/epoch_wise_learning_trajectories/*.csv,"selected examples in paper; full 70-cell grid released",Test Acc|Memorization Acc|Self-Correction Acc,staged,0 percent noise has no exception/self-correction positions
+Figure 3,Acoustic perturbation probe,data/acoustic_perturbation_probe/all_settings_summary.csv,all nonzero-noise settings,metric1_changed_pred_B_acc|metric2_changed_pred_A_acc|metric3_unchanged_pred_A_acc,staged,Dashboard labels these as Exception Retention|Exception Correction|Rule Retention
+Appendix - depth control,Transformer depth truncation,data/appendix_results/capacity/depth_truncation_full_test_accuracy.csv,all rows,test_accuracy|checkpoint_dev_accuracy|final_train_accuracy_from_log|final_dev_accuracy_from_log,staged,Private path and runtime columns removed
+Appendix - bottleneck,Bottleneck rank intervention long table,data/appendix_results/capacity/bottleneck_full_test_checkpoint_best_long.csv,all rows,test_accuracy|best_dev_accuracy|final_train_accuracy|final_dev_accuracy,staged,Private path and runtime columns removed
+Appendix - bottleneck,Bottleneck rank intervention matrix,data/appendix_results/capacity/bottleneck_full_test_checkpoint_best_matrix.csv,all rows,ratio_50pct|ratio_60pct|ratio_70pct|ratio_80pct,staged,Matrix view of best-checkpoint test accuracy
+Appendix - HuBERT,HuBERT best-validation summary,data/appendix_results/hubert/hubert_scale10_best_by_valid_summary.csv,all rows,reported_acc_gen|acc_em|acc_sc,staged,0 percent noise has no exception/self-correction positions
+Appendix - HuBERT,HuBERT epoch-wise trajectories,data/appendix_results/hubert/hubert_scale10_memorization_trajectory_all.csv,all rows,acc_gen|acc_em|acc_sc,staged,Private checkpoint path column removed
+Appendix - perturbation,Noise-family perturbation ablation,data/appendix_results/perturbation_ablation/noise_ablation_scale100_ratio10_70_summary.csv,scale 100 ratio 10/70,ER_exception_retention|EC_exception_correction|RR_rule_retention,staged,Private checkpoint and manifest columns removed
+Appendix - pretraining controls,Random initialization control,NA,NA,NA,manifest_only,Checkpoint collection recorded; result CSV not yet staged
+Appendix - pretraining controls,Frozen pretrained features,NA,NA,NA,manifest_only,Checkpoint collection recorded; result CSV not yet staged
+

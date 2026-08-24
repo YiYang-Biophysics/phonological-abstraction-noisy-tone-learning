@@ -1,0 +1,8 @@
+# Copy and edit for local reproduction.
+aishell_root: /path/to/AISHELL-1
+fairseq_root: /path/to/fairseq
+pretrained_checkpoint_root: /path/to/pretrained/models
+released_checkpoint_root: /path/to/released/checkpoints
+output_root: /path/to/output
+tracker: none
+

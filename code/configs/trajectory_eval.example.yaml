@@ -1,0 +1,10 @@
+metrics:
+  - test_accuracy
+  - exception_memorization
+  - self_correction
+checkpoint_source: external_checkpoint_root
+max_epochs_for_dashboard: 30
+zero_noise_exception_metrics: not_applicable
+notes: >
+  The released trajectory CSVs are under data/epoch_wise_learning_trajectories.
+

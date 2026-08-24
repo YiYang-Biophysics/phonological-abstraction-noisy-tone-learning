@@ -1,0 +1,11 @@
+model,scale_pct,noise_ratio_pct,best_valid_epoch,best_valid_acc,checkpoint_name,reported_acc_gen,acc_em,acc_sc,changed_positions
+hubert_base_ls960,10,0,7,91.166,checkpoint7.pt,90.29,,,0
+hubert_base_ls960,10,10,5,90.418,checkpoint5.pt,89.804,4.946,87.554,17186
+hubert_base_ls960,10,20,6,89.983,checkpoint6.pt,89.2,7.789,84.177,34291
+hubert_base_ls960,10,30,5,89.395,checkpoint5.pt,88.771,5.11,85.696,51307
+hubert_base_ls960,10,40,6,88.399,checkpoint6.pt,88.046,7.164,82.975,68410
+hubert_base_ls960,10,50,5,87.253,checkpoint5.pt,86.412,5.63,83.119,85698
+hubert_base_ls960,10,60,5,85.358,checkpoint5.pt,84.901,6.059,80.874,102716
+hubert_base_ls960,10,70,5,79.045,checkpoint5.pt,79.204,7.715,73.259,119955
+hubert_base_ls960,10,80,4,45.599,checkpoint4.pt,46.481,16.044,36.045,136753
+hubert_base_ls960,10,90,13,23.952,checkpoint13.pt,25.363,97.95,0.348,153876

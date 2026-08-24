@@ -1,0 +1,4 @@
+# The reviewer dashboard uses only static HTML/CSS/JavaScript.
+# Python standard library is sufficient for scripts/run_dashboard.py and
+# scripts/validate_release.py.
+

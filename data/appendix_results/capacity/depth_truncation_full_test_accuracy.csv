@@ -1,0 +1,13 @@
+run_label,run_name,checkpoint_type,checkpoint_dev_epoch,checkpoint_dev_accuracy,checkpoint_dev_loss,test_accuracy,test_loss,test_ntokens,test_nsentences,table_final_train,table_final_dev,table_best_dev,final_train_accuracy_from_log,final_dev_accuracy_from_log,best_accuracy_epoch,best_accuracy_dev,best_accuracy_dev_loss,best_loss_epoch,best_loss_dev,best_loss_value
+"12L, 50%, 50%",base12L_scale50pct_ratio50pct,best_saved_checkpoint_best,7,89.215,1.015,88.151,1.028,122471,7173,99.965,57.282,89.215,99.965,57.282,4,91.474,1.035,7,89.215,1.015
+"12L, 50%, 50%",base12L_scale50pct_ratio50pct,final_dev_checkpoint_last,23,57.282,6.483,56.577,6.646,122471,7173,99.965,57.282,89.215,99.965,57.282,4,91.474,1.035,7,89.215,1.015
+"2L, 100%, 50%",base2L_scale100pct_ratio50pct,best_saved_checkpoint_best,11,87.398,1.099,86.288,1.107,122471,7173,99.999,54.247,87.398,99.999,54.247,10,87.951,1.124,11,87.398,1.099
+"2L, 100%, 50%",base2L_scale100pct_ratio50pct,final_dev_checkpoint_last,75,54.247,11.365,54.418,11.464,122471,7173,99.999,54.247,87.398,99.999,54.247,10,87.951,1.124,11,87.398,1.099
+"2L, 100%, 90%",base2L_scale100pct_ratio90pct,best_saved_checkpoint_best,2,20.059,2.262,22.21,2.215,122471,7173,99.999,24.429,20.059,99.999,24.429,1,25.441,2.464,2,20.059,2.262
+"2L, 100%, 90%",base2L_scale100pct_ratio90pct,final_dev_checkpoint_last,75,24.429,31.293,25.824,30.537,122471,7173,99.999,24.429,20.059,99.999,24.429,1,25.441,2.464,2,20.059,2.262
+"2L, 50%, 50%",rerun_base2L_scale50pct_ratio50pct_lr5e5_noepoch_20260520,best_saved_checkpoint_best,11,84.331,1.132,83.121,1.136,122471,7173,100.0,55.814,86.416,100,55.814,9,86.416,1.14,11,84.331,1.132
+"2L, 50%, 50%",rerun_base2L_scale50pct_ratio50pct_lr5e5_noepoch_20260520,final_dev_checkpoint_last,75,55.814,8.498,55.918,8.592,122471,7173,100.0,55.814,86.416,100,55.814,9,86.416,1.14,11,84.331,1.132
+"4L, 50%, 50%",base4L_scale50pct_ratio50pct,best_saved_checkpoint_best,4,88.85,1.089,88.142,1.099,122471,7173,99.994,55.776,88.85,99.994,55.776,4,88.85,1.089,4,88.85,1.089
+"4L, 50%, 50%",base4L_scale50pct_ratio50pct,final_dev_checkpoint_last,23,55.776,6.334,56.081,6.344,122471,7173,99.994,55.776,88.85,99.994,55.776,4,88.85,1.089,4,88.85,1.089
+"6L, 50%, 50%",base6L_scale50pct_ratio50pct,best_saved_checkpoint_best,6,87.719,1.054,86.879,1.062,122471,7173,99.994,58.407,87.719,99.994,58.407,4,90.556,1.06,6,87.719,1.054
+"6L, 50%, 50%",base6L_scale50pct_ratio50pct,final_dev_checkpoint_last,23,58.407,5.737,58.709,5.742,122471,7173,99.994,58.407,87.719,99.994,58.407,4,90.556,1.06,6,87.719,1.054

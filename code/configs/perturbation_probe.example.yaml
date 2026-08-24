@@ -1,0 +1,13 @@
+snr_db: [50, 45, 40, 30, 25, 20, 15, 10, 8, 6, 4, 2, 0]
+metrics:
+  - exception_retention
+  - exception_correction
+  - rule_retention
+checkpoint_kinds: [best, last]
+noise_families:
+  main: gaussian_white
+  appendix: [uniform_white, laplace_white, pink_gaussian]
+notes: >
+  Public scripts should accept explicit manifest/checkpoint/output arguments
+  and should not hard-code cluster paths.
+

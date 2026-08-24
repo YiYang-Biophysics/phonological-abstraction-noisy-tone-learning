@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phonological Abstraction and Exception Memorization</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css?v=20260526-review-clean-v5" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar" aria-label="Dashboard navigation">
+        <div class="brand">
+          <div class="brand-mark">RE</div>
+          <div>
+            <div class="brand-title">Rule-Exception Dynamics</div>
+            <div class="brand-subtitle">Released data browser</div>
+          </div>
+        </div>
+        <nav>
+          <a href="#heatmap">Landscape</a>
+          <a href="#trajectories">Trajectories</a>
+          <a href="#perturbations">Perturbation</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="overview" class="hero-section">
+          <div class="hero-copy">
+            <p class="eyebrow">Released data browser</p>
+            <h1>Phonological Abstraction and Exception Memorization</h1>
+            <p class="lead">
+              Interactive browser for the released CSV results. The dashboard can run from GitHub Pages, a local server, or directly from this folder.
+            </p>
+          </div>
+          <div class="hero-panel status-grid" aria-label="Data status">
+            <div class="status-row">
+              <span>Experiment grid</span>
+              <strong id="matrixStatus">Loading</strong>
+            </div>
+            <div class="status-row">
+              <span>Trajectory CSVs</span>
+              <strong id="trajectoryStatus">Loading</strong>
+            </div>
+            <div class="status-row">
+              <span>Perturbation settings</span>
+              <strong id="perturbationStatus">Loading</strong>
+            </div>
+            <div class="status-row">
+              <span>Missing cells</span>
+              <strong id="missingStatus">Loading</strong>
+            </div>
+          </div>
+          <div class="data-summary" id="loadedSummary">Loading...</div>
+        </section>
+
+        <section id="heatmap" class="section">
+          <div class="section-heading with-actions">
+            <div>
+              <p class="eyebrow">Figure 2 data</p>
+              <h2>Scale-noise performance landscape</h2>
+            </div>
+            <div class="legend" id="heatmapLegend"></div>
+          </div>
+          <div class="viz-grid">
+            <div class="viz-card wide">
+              <div id="heatmapView" class="heatmap-wrap" role="img" aria-label="Scale by label-noise heatmap"></div>
+            </div>
+            <aside class="insight-panel">
+              <h3>Grid readout</h3>
+              <div id="heatmapStats" class="stat-list"></div>
+              <div class="note-box">
+                Regimes follow the manuscript thresholds: robust phonological generalization (&ge;75%), abrupt transition (30%-75%), and high-noise collapse (&lt;30%).
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="trajectories" class="section trajectories-section">
+          <div class="section-heading with-actions">
+            <div>
+              <p class="eyebrow">Figure 3 and full grid</p>
+              <h2>Epoch-wise learning trajectories</h2>
+            </div>
+            <div class="control-row">
+              <label>
+                Scale
+                <select id="scaleSelect"></select>
+              </label>
+              <label>
+                Noise
+                <select id="ratioSelect"></select>
+              </label>
+            </div>
+          </div>
+          <div class="viz-grid">
+            <div class="viz-card wide">
+              <div id="trajectoryTitle" class="chart-title"></div>
+              <div id="trajectoryView" class="chart-wrap" role="img" aria-label="Epoch trajectory chart"></div>
+            </div>
+            <aside class="insight-panel">
+              <h3>Trajectory readout</h3>
+              <div id="trajectoryStats" class="stat-list"></div>
+              <div class="note-box">
+                Hover to inspect an epoch. Use arrow keys to move across the grid.
+              </div>
+            </aside>
+          </div>
+          <div class="coverage-block">
+            <div class="coverage-header">
+              <h3>Trajectory coverage</h3>
+              <span>Click a cell, then use arrow keys to move across the grid.</span>
+            </div>
+            <div id="coverageGrid" class="coverage-grid"></div>
+          </div>
+        </section>
+
+        <section id="perturbations" class="section">
+          <div class="section-heading with-actions">
+            <div>
+              <p class="eyebrow">Figure 4 data</p>
+              <h2>Acoustic perturbation probe</h2>
+            </div>
+            <div class="control-row">
+              <label>
+                Scale
+                <select id="perturbScaleSelect"></select>
+              </label>
+              <label>
+                Noise
+                <select id="perturbRatioSelect"></select>
+              </label>
+            </div>
+          </div>
+          <div class="viz-card perturb-lines-card">
+            <div id="perturbCurveTitle" class="chart-title"></div>
+            <div class="snr-inspector" aria-label="SNR inspector">
+              <div class="snr-slider-row">
+                <label for="perturbSnrSlider">SNR (dB)</label>
+                <input id="perturbSnrSlider" type="range" min="0" max="12" step="1" value="0" />
+                <strong id="perturbSnrReadout">50 dB</strong>
+              </div>
+              <div id="perturbSnrTicks" class="snr-tick-row" aria-label="SNR dB presets">
+                <button type="button" class="snr-tick selected" data-snr-index="0" aria-pressed="true">50</button>
+                <button type="button" class="snr-tick" data-snr-index="1" aria-pressed="false">45</button>
+                <button type="button" class="snr-tick" data-snr-index="2" aria-pressed="false">40</button>
+                <button type="button" class="snr-tick" data-snr-index="3" aria-pressed="false">30</button>
+                <button type="button" class="snr-tick" data-snr-index="4" aria-pressed="false">25</button>
+                <button type="button" class="snr-tick" data-snr-index="5" aria-pressed="false">20</button>
+                <button type="button" class="snr-tick" data-snr-index="6" aria-pressed="false">15</button>
+                <button type="button" class="snr-tick" data-snr-index="7" aria-pressed="false">10</button>
+                <button type="button" class="snr-tick" data-snr-index="8" aria-pressed="false">8</button>
+                <button type="button" class="snr-tick" data-snr-index="9" aria-pressed="false">6</button>
+                <button type="button" class="snr-tick" data-snr-index="10" aria-pressed="false">4</button>
+                <button type="button" class="snr-tick" data-snr-index="11" aria-pressed="false">2</button>
+                <button type="button" class="snr-tick" data-snr-index="12" aria-pressed="false">0</button>
+              </div>
+              <div id="perturbSnrStats" class="snr-stat-grid"></div>
+            </div>
+            <div class="checkpoint-compare-grid">
+              <section class="checkpoint-panel" aria-label="Best checkpoint perturbation curves">
+                <h3>Best checkpoint</h3>
+                <div id="perturbBestCurveView" class="chart-wrap compact" role="img" aria-label="Best checkpoint SNR perturbation response curves"></div>
+              </section>
+              <section class="checkpoint-panel" aria-label="Last checkpoint perturbation curves">
+                <h3>Last checkpoint</h3>
+                <div id="perturbLastCurveView" class="chart-wrap compact" role="img" aria-label="Last checkpoint SNR perturbation response curves"></div>
+              </section>
+            </div>
+            <div id="perturbLegend" class="inline-legend"></div>
+          </div>
+          <div class="coverage-block">
+            <div class="coverage-header">
+              <h3>Perturbation coverage</h3>
+              <span>63 nonzero-noise settings; click a cell, then use arrow keys to move.</span>
+            </div>
+            <div id="perturbCoverageGrid" class="coverage-grid"></div>
+          </div>
+        </section>
+
+        <footer class="data-footer" aria-label="Included data">
+          <span>Included data</span>
+          <code>scale_noise_performance_landscape</code>
+          <code>epoch_wise_learning_trajectories</code>
+          <code>acoustic_perturbation_probe</code>
+        </footer>
+      </main>
+    </div>
+    <div id="tooltip" class="tooltip" hidden></div>
+    <script src="./embedded_data.js?v=20260526-review-clean-v5"></script>
+    <script src="./app.js?v=20260526-review-clean-v5"></script>
+  </body>
+</html>
